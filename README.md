@@ -12,7 +12,7 @@ This modified version adds new features, fixes, and performance improvements for
 
 ## 📥 Installation
 
-To download LensFlare, go to the [**Releases**]() page.
+To download LensFlare, go to the [**Releases**](https://github.com/PyreX09/LensFlare/releases) page.
 
 
 ---
@@ -72,6 +72,7 @@ Built for first-person and cinematic scenes, tested up to 120 FPS, maybe.
 ## 👑 Special Thanks
 
 [@gluGPU](https://devforum.roblox.com/u/glugpu/summary) : Creator of [LensFlare](https://create.roblox.com/store/asset/89532403908041/Lens-Flare-System) a system that I have spent countless hours modifying.
+
 
 
 
