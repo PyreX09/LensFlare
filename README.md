@@ -67,11 +67,12 @@ Each flare runs on a render step bind, optimized to reduce redundant updates.
 
 Uses cached attributes and properties for minimal overhead.
 
-Built for first-person and cinematic scenes, tested up to 120 FPS.
+Built for first-person and cinematic scenes, tested up to 120 FPS, maybe.
 
 ## 👑 Special Thanks
 
 [@gluGPU](https://devforum.roblox.com/u/glugpu/summary) : Creator of [LensFlare](https://create.roblox.com/store/asset/89532403908041/Lens-Flare-System) a system that I have spent countless hours modifying.
+
 
 
 
