@@ -75,11 +75,20 @@ Built for first-person and cinematic scenes, tested up to 120 FPS, maybe.
 
 ## ❓ Q&A
 Q: How do I add a light to myself?
+
 A: Do it like this 👇
+
 	1. Add the Tag:** `LensFlare` to the object you want to have the flare effect.  
+	
 	2. Add the following Attributes:
+	
  	  - `LensFlareDistance`
+	  
  	  - `LensFlareLOD`
+	  
  	  - `LensFlareStrength`
+	  
  	  - `LensFlareStyle`
+	  
 	3. You can **set the values according to the example model in Workspace**, or tweak them yourself as you like.
+
