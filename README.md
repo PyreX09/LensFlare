@@ -73,7 +73,7 @@ Built for first-person and cinematic scenes, tested up to 120 FPS, maybe.
 
 [@gluGPU](https://devforum.roblox.com/u/glugpu/summary) : Creator of [LensFlare](https://create.roblox.com/store/asset/89532403908041/Lens-Flare-System) a system that I have spent countless hours modifying.
 
-# ❓ Q&A (Extended)
+## ❓ Q&A (Extended)
 
 ### Q: How do I add a light to myself?
 **A:** Do it like this 👇
@@ -176,3 +176,4 @@ If `DEBUG_MODE = true`, the console prints:
 - Re-emission events  
 
 It’s useful for tweaking flare behavior during development.
+
