@@ -143,10 +143,10 @@ Determines how visible/bright a flare is.
 
 ### Q: What is `LensFlareDistance`?
 **A:**  
-This is the default maximum distance at which a flare is visible.
-Used when LOD_ENABLED = false.
-Flare disappears if the camera is farther than this value.
-Think of it as the “always use this distance” setting.
+This is the default maximum distance at which a flare is visible. 
+Used when LOD_ENABLED = false. 
+Flare disappears if the camera is farther than this value. 
+Think of it as the “always use this distance” setting. 
 
 ---
 
@@ -177,4 +177,5 @@ If `DEBUG_MODE = true`, the console prints:
 - Re-emission events  
 
 It’s useful for tweaking flare behavior during development.
+
 
