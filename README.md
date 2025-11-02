@@ -73,7 +73,7 @@ Built for first-person and cinematic scenes, tested up to 120 FPS, maybe.
 
 [@gluGPU](https://devforum.roblox.com/u/glugpu/summary) : Creator of [LensFlare](https://create.roblox.com/store/asset/89532403908041/Lens-Flare-System) a system that I have spent countless hours modifying.
 
-## ❓ Q&A (Extended)
+# ❓ Q&A (Extended)
 
 ### Q: How do I add a light to myself?
 **A:** Do it like this 👇
@@ -116,36 +116,45 @@ Built for first-person and cinematic scenes, tested up to 120 FPS, maybe.
 
 ---
 
+### Q: What is `LensFlareDistance`?
+**A:** This is the **default maximum distance** at which a flare is visible.  
+- Used when `LOD_ENABLED = false`.  
+- Flare disappears if the camera is farther than this value.  
+- Think of it as the **“always use this distance”** setting.
+
+---
+
 ### Q: What does `LensFlareLOD` affect?
-**A:** LensFlareLOD is a multiplier for LOD_SCALE to determine the maximum visible distance of a flare. 
-		Maximum distance = LOD_SCALE * LensFlareLOD 
-		Example: 
-			- LOD_SCALE = 200 
-			- LensFlareLOD = 3 
-			- Maximum visible distance = 200 × 3 = 600 studs 
-		Also affects dynamic raycount & flare fading based on distance.
+**A:** `LensFlareLOD` is a **multiplier for `LOD_SCALE`** used **when `LOD_ENABLED = true`**.  
+- Maximum visible distance = `LOD_SCALE × LensFlareLOD`  
+- Example:  
+  - `LOD_SCALE = 200`  
+  - `LensFlareLOD = 3`  
+  - Maximum visible distance = 200 × 3 = 600 studs  
+- Also affects **dynamic raycount & flare fading** based on distance.  
+
+---
+
+### ⚡ TL;DR Comparison
+
+| Setting | Used when | Determines | Notes |
+|---------|------------|------------|-------|
+| `LensFlareDistance` | LOD_DISABLED | Max flare distance | Default distance, flare always visible within this range |
+| `LensFlareLOD × LOD_SCALE` | LOD_ENABLED | Max flare distance & dynamic LOD | Adjusts rays & fade, overrides LensFlareDistance for LOD logic |
 
 ---
 
 ### Q: What is `LensFlareStrength`?
 **A:** Determines how visible/bright a flare is.  
-        - 0 → invisible  
-        - 1 → full brightness  
-
----
-
-### Q: What is `LensFlareDistance`?
-**A:** This is the default maximum distance at which a flare is visible.
-        - Used when LOD_ENABLED = false. 
-        - Flare disappears if the camera is farther than this value. 
-        - Think of it as the “always use this distance” setting. 
+- 0 → invisible  
+- 1 → full brightness  
 
 ---
 
 ### Q: How does the system handle dynamic raycasts?
 **A:** If LOD is enabled, the number of rays is recalculated based on distance.  
-        - Closer → more rays → accurate obstruction  
-        - Farther → fewer rays → performance optimized  
+- Closer → more rays → accurate obstruction  
+- Farther → fewer rays → performance optimized  
 
 ---
 
@@ -159,16 +168,11 @@ You only need to mess with it if you wanna tweak the sun flare manually.
 ### Q: How does debug mode work?
 **A:**  
 If `DEBUG_MODE = true`, the console prints:
-    - Part name  
-    - Flare alpha  
-    - Number of rays hitting  
-    - Distance to camera  
-    - LOD recalculations  
-    - Re-emission events  
+- Part name  
+- Flare alpha  
+- Number of rays hitting  
+- Distance to camera  
+- LOD recalculations  
+- Re-emission events  
 
 It’s useful for tweaking flare behavior during development.
-
-
-
-
-
