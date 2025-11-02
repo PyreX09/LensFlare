@@ -102,17 +102,17 @@ Built for first-person and cinematic scenes, tested up to 120 FPS, maybe.
 
 ### Q: How does `TRANSPARENCY_THRESHOLD` work?
 **A:** Parts more transparent than this value won’t block lens flares.  
-		- 1 → even fully transparent parts block flares.  
-		- 0 → only opaque parts block flares.
+- 1 → even fully transparent parts block flares.  
+- 0 → only opaque parts block flares.
 
 ---
 
 ### Q: How is sun flare strength determined?
 **A:** Sun flare is based on:
-		- `SUN_ANGLE_THRESHOLD` → angle above horizon to start fading  
-		- `SUN_BRIGHTNESS_THRESHOLD` → Lighting.Brightness value for full strength  
-		- `SUN_EXPOSURE_ADJUSTMENT` → exposure change when looking directly at sun  
-		- `SUN_EXPOSURE_TIME` → duration of smooth exposure adjustment  
+- `SUN_ANGLE_THRESHOLD` → angle above horizon to start fading  
+- `SUN_BRIGHTNESS_THRESHOLD` → Lighting.Brightness value for full strength  
+- `SUN_EXPOSURE_ADJUSTMENT` → exposure change when looking directly at sun  
+- `SUN_EXPOSURE_TIME` → duration of smooth exposure adjustment  
 
 ---
 
@@ -120,9 +120,9 @@ Built for first-person and cinematic scenes, tested up to 120 FPS, maybe.
 **A:** LensFlareLOD is a multiplier for LOD_SCALE to determine the maximum visible distance of a flare. 
 		Maximum distance = LOD_SCALE * LensFlareLOD 
 		Example: 
-			LOD_SCALE = 200 
-			LensFlareLOD = 3 
-			Maximum visible distance = 200 × 3 = 600 studs 
+			- LOD_SCALE = 200 
+			- LensFlareLOD = 3 
+			- Maximum visible distance = 200 × 3 = 600 studs 
 		Also affects dynamic raycount & flare fading based on distance.
 
 ---
@@ -167,6 +167,7 @@ If `DEBUG_MODE = true`, the console prints:
     - Re-emission events  
 
 It’s useful for tweaking flare behavior during development.
+
 
 
 
