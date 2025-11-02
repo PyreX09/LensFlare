@@ -117,35 +117,35 @@ Built for first-person and cinematic scenes, tested up to 120 FPS, maybe.
 ---
 
 ### Q: What does `LensFlareLOD` affect?
-**A:** LensFlareLOD is a multiplier for LOD_SCALE to determine the maximum visible distance of a flare.
-		Maximum distance = LOD_SCALE * LensFlareLOD
-		Example:
-			LOD_SCALE = 200
-			LensFlareLOD = 3
-			Maximum visible distance = 200 × 3 = 600 studs
-	   Also affects dynamic raycount & flare fading based on distance.
+**A:** LensFlareLOD is a multiplier for LOD_SCALE to determine the maximum visible distance of a flare. 
+		Maximum distance = LOD_SCALE * LensFlareLOD 
+		Example: 
+			LOD_SCALE = 200 
+			LensFlareLOD = 3 
+			Maximum visible distance = 200 × 3 = 600 studs 
+		Also affects dynamic raycount & flare fading based on distance.
 
 ---
 
 ### Q: What is `LensFlareStrength`?
 **A:** Determines how visible/bright a flare is.  
-		- 0 → invisible  
-		- 1 → full brightness  
+        - 0 → invisible  
+        - 1 → full brightness  
 
 ---
 
 ### Q: What is `LensFlareDistance`?
-**A:** This is the default maximum distance at which a flare is visible. 
-		- Used when LOD_ENABLED = false. 
-		- Flare disappears if the camera is farther than this value. 
-		- Think of it as the “always use this distance” setting. 
+**A:** This is the default maximum distance at which a flare is visible.
+        - Used when LOD_ENABLED = false. 
+        - Flare disappears if the camera is farther than this value. 
+        - Think of it as the “always use this distance” setting. 
 
 ---
 
 ### Q: How does the system handle dynamic raycasts?
 **A:** If LOD is enabled, the number of rays is recalculated based on distance.  
-		- Closer → more rays → accurate obstruction  
-		- Farther → fewer rays → performance optimized  
+        - Closer → more rays → accurate obstruction  
+        - Farther → fewer rays → performance optimized  
 
 ---
 
@@ -159,14 +159,15 @@ You only need to mess with it if you wanna tweak the sun flare manually.
 ### Q: How does debug mode work?
 **A:**  
 If `DEBUG_MODE = true`, the console prints:
-- Part name  
-- Flare alpha  
-- Number of rays hitting  
-- Distance to camera  
-- LOD recalculations  
-- Re-emission events  
+    - Part name  
+    - Flare alpha  
+    - Number of rays hitting  
+    - Distance to camera  
+    - LOD recalculations  
+    - Re-emission events  
 
 It’s useful for tweaking flare behavior during development.
+
 
 
 
