@@ -123,9 +123,13 @@ Sun flare is based on:
 
 ### Q: What does `LensFlareLOD` affect?
 **A:**  
-LOD (Level of Detail) scales flare quality based on distance.  
-- Higher LOD → flares stay detailed farther away  
-- Lower LOD → distant flares simplify/fade sooner  
+LensFlareLOD is a multiplier for LOD_SCALE to determine the maximum visible distance of a flare.
+	Maximum distance = LOD_SCALE * LensFlareLOD
+	Example:
+		LOD_SCALE = 200
+		LensFlareLOD = 3
+		Maximum visible distance = 200 × 3 = 600 studs
+Also affects dynamic raycount & flare fading based on distance.
 
 ---
 
@@ -139,8 +143,10 @@ Determines how visible/bright a flare is.
 
 ### Q: What is `LensFlareDistance`?
 **A:**  
-Maximum distance at which a flare is visible.  
-- Flare disappears if camera is farther than this value.
+This is the default maximum distance at which a flare is visible.
+Used when LOD_ENABLED = false.
+Flare disappears if the camera is farther than this value.
+Think of it as the “always use this distance” setting.
 
 ---
 
@@ -153,9 +159,10 @@ If LOD is enabled, the number of rays is recalculated based on distance.
 ---
 
 ### Q: Can I make a sun lens flare?
-**A:**  
-Yes. Create a Part, set `IsSunFlare = true` and give it `LensFlareDistance` and `LensFlareStrength`.  
-The module automatically updates position, strength, and exposure based on Lighting and camera.
+**A:** 
+The system already **creates the sun flare automatically**.  
+It handles position, strength, and exposure based on Lighting and camera for you.  
+You only need to mess with it if you wanna tweak the sun flare manually.
 
 ---
 
@@ -170,3 +177,4 @@ If `DEBUG_MODE = true`, the console prints:
 - Re-emission events  
 
 It’s useful for tweaking flare behavior during development.
+
