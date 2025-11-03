@@ -135,12 +135,34 @@ Built for first-person and cinematic scenes, tested up to 120 FPS, maybe.
 
 ---
 
+### Q: What is MIN_RAY_RATIO?
+**A:** The minimum ratio of rays to keep during LOD adaptive scaling.
+- Ensures that even at low FPS or far distances, at least this portion of rays are cast.
+- Value between 0 and 1 (e.g., 0.2 → 20% of NUMBER_OF_RAYCASTS).
+
+---
+
+### Q: What is TARGET_FPS?
+**A:** Desired framerate for adaptive LOD calculation.
+- System adjusts ray count to keep performance near this FPS.
+- Lower FPS than target → fewer rays → better performance.
+- Higher FPS than target → more rays → better quality.
+
+---
+
+### Q: What is FPS_SAMPLE_COUNT?
+**A:** Number of frames to average for FPS calculation.
+- Higher value → smoother FPS estimation, slower reaction to sudden frame drops.
+- Lower value → reacts quickly, but FPS value fluctuates more.
+
+---
+
 ### ⚡ TL;DR Comparison
 
-| Setting | Used when | Determines | Notes |
-|---------|------------|------------|-------|
-| `LensFlareDistance` | LOD_DISABLED | Max flare distance | Default distance, flare always visible within this range |
-| `LensFlareLOD × LOD_SCALE` | LOD_ENABLED | Max flare distance & dynamic LOD | Adjusts rays & fade, overrides LensFlareDistance for LOD logic |
+| Setting                    | Used when    | Determines                       | Notes                                                          |
+| -------------------------- | ------------ | -------------------------------- | -------------------------------------------------------------- |
+| `LensFlareDistance`        | LOD_DISABLED | Max flare distance               | Default distance, flare always visible within this range       |
+| `LensFlareLOD × LOD_SCALE` | LOD_ENABLED  | Max flare distance & dynamic LOD | Adjusts rays & fade, overrides LensFlareDistance for LOD logic |
 
 ---
 
@@ -174,6 +196,8 @@ If `DEBUG_MODE = true`, the console prints:
 - Distance to camera  
 - LOD recalculations  
 - Re-emission events  
+- FPS
 
 It’s useful for tweaking flare behavior during development.
+
 
