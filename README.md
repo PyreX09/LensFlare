@@ -28,6 +28,28 @@ To download LensFlare, go to the [**Releases**](https://github.com/PyreX09/LensF
 
 ---
 
+## 📊 Performance Comparison
+
+LensFlare Frame Time Across Versions
+
+This project includes performance profiling for LensFlare updates per frame across versions 1.2.1 to 1.2.3 using Roblox Studio MicroProfiler.
+
+### Average Frame Time per Version
+
+![Average LensFlare Frame Time](Images/Donut Chart].png)
+- Donut Chart: Shows the average update time per frame for each version.
+	- Higher values → slower performance
+	- Lower values → faster performance
+
+![LensFlare FPS Profile](Images/Stacked Line Char.png)
+- Stacked Line Chart: Shows frame-by-frame timing for LensFlare updates across versions.
+
+	- X-axis: Frame Number
+
+	- Y-axis: Frame Time (ms)
+
+---
+
 ## 🚀 Usage Example
 
 ```lua
@@ -199,5 +221,6 @@ If `DEBUG_MODE = true`, the console prints:
 - FPS
 
 It’s useful for tweaking flare behavior during development.
+
 
 
