@@ -36,7 +36,7 @@ This project includes performance profiling for LensFlare updates per frame acro
 
 ### Average Frame Time per Version
 
-![Average LensFlare Frame Time](Images/Stacked_Line_Char.png)
+![Average LensFlare Frame Time](ImagesDonut_Chart.png)
 - Donut Chart: Shows the average update time per frame for each version.
 	- Higher percentage → slower performance
 	- Lower percentage → faster performance
@@ -226,6 +226,7 @@ If `DEBUG_MODE = true`, the console prints:
 - FPS
 
 It’s useful for tweaking flare behavior during development.
+
 
 
 
